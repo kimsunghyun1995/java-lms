@@ -37,8 +37,8 @@ public class Enrollment {
 	}
 
 	private boolean validateParticipantsLimit() {
-		if (maximumNumberOfParticipants < nsUsers.getNumberOfStudent() + INCREASE_STUDENT) {
-			throw new IllegalArgumentException("수강인원이 초과되었습니다.");
+		if (maximumNumberOfParticipants > nsUsers.getNumberOfStudent() + INCREASE_STUDENT) {
+			throw new IllegalArgumentException("수강인원이 초과되지않았습니다.");
 		}
 		return true;
 	}
